@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CORA</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link rel="sortcut icon" href="images/icone.ico" type="image/x-icon" />
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+
+<body>
+	<div class="tela" id="tela1">
+		<img src="./Images/logo.png" id="logo">
+		<div class="botoes" id="botoes1">
+			<button id="botao1" onclick="MudarTela('tela1','disab')">Criar roteiro</button>
+			<button id="botao2">Roteiros pré-definidos</button>
+			<button id="botao3">Roteiros salvos</button>
+			<button id="botao4">Configurações</button>
+			<button id="botao5">Ajuda</button>
+		</div>
+	</div>
+	<div class="tela" id="disab">
+		<img src="./Images/logo.png" id="logoresto">
+		<h1>Você possui alguma limitação? Caso possua, selecione abaixo quais.</h1>
+		<table>
+			<tr>
+				<td>
+					<div class="imagens"><img onclick="SelecionarIMG()" src="./Images/Accessibility/auditivo2.png"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="imagens"><img onclick="SelecionarIMG()" src="./Images/Accessibility/visual.png"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="imagens"><img onclick="SelecionarIMG()" src="./Images/Accessibility/locomocao.png"></div>
+				</td>
+			</tr>
+		</table>
+	</table>
+	<div class="botoes inline" id="botoes2">
+		<button id="voltar" onclick="MudarTela('tela1','disab')">VOLTAR</button>
+		<button id="proximo" onclick="MudarTela('disab','tela2')">PRÓXIMO</button>
+	</div>
+	</div>
+	<div class="tela" id="tela2">
+		<img src="./Images/logo.png" id="logoresto">
+		<h1>Que tipos de locais você deseja visitar durante sua viagem?</h1>
+		<table>
+			<tr>
+				<td>
+					<div class="imagens"><img id="primeira" onclick="SelecionarIMG()"
+							src="./Images/parque_diversoes.png"></div>
+				</td>
+				<td>
+					<div class="imagens"><img id="segunda" onclick="SelecionarIMG()"
+							src="./Images/beach.png"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="imagens"><img id="primeira" onclick="SelecionarIMG()"
+							src="./Images/beach.png"></div>
+				</td>
+				<td>
+					<div class="imagens"><img id="segunda" onclick="SelecionarIMG()"
+							src="./Images/parque_diversoes.png"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="imagens"><img id="primeira" onclick="SelecionarIMG()"
+							src="./Images/parque_diversoes.png"></div>
+				</td>
+				<td>
+					<div class="imagens"><img id="segunda" onclick="SelecionarIMG()"
+							src="./Images/beach.png"></div>
+				</td>
+			</tr>
+		</table>
+		<div class="botoes inline" id="botoes2">
+			<button id="voltar" onclick="MudarTela('tela2','disab')">VOLTAR</button>
+			<button id="proximo" onclick="MudarTela('tela2','tela3')">PRÓXIMO</button>
+		</div>
+	</div>
+	<div class="tela" id="tela3">
+		<img src="./Images/logo.png" id="logoresto">
+		<h1>Já foi definida alguma hospedagem?</h1>
+		<div class="botoes" id="botoes3">
+			<button id="sim" onclick="MudarTela('tela3', 'tela4')">Sim</button>
+			<button id="nao">Não</button>
+			<div class="botoes">
+				<button style="margin-top:30%;" id="voltar" onclick="MudarTela('tela3','tela2')">VOLTAR</button>
+			</div>
+		</div>
+	</div>
+	<div class="tela" id="tela4">
+		<img src="./Images/logo.png" id="logoresto">
+		<h1>Selecione os dias da viagem</h1>
+		<input type="date"></input>
+		<h1 id="iv">Ida</h1>
+		<input type="date"></input>
+		<h1 id="iv">Volta</h1>
+		<div class="botoes inline">
+			<button id="voltar" onclick="MudarTela('tela4','tela3')">VOLTAR</button>
+			<button id="proximo" onclick="MudarTela('tela4','tela5')">PRÓXIMO</button>
+		</div>
+	</div>
+	<div class="tela" id="tela5">
+		<h1>Selecione os lugares que deseja visitar</h1>
+		<div class="info">
+			<div class="lugar"><img onclick="selectLugar()" src="./Images/places/1.jpg"></div>
+			<h2>Barco Pirata</h2>
+			<div class="more" id="more2">
+				<p>Horários: Saída do barco as 10h, 12h, 14h e 16h<br>Duração do passeio: 1h30min
+				</p>
+				<p id="p1">O barco de passeio sai da Barra Sul, ao lado do Parque Unipraias Camboriú, navegando toda a
+					orla central de Balneário Camboriú - SC, passando pela Ilha das Cabras e desembarca na Praia de
+					Laranjeiras. Durante a ida um maravilhoso e animando show e muita dança com os piratas a bordo. É
+					possível também ficar na Praia de Laranjeiras e retornar com os barcos seguintes.</p>
+				<img id="alo" src="./Images/alo.png">
+				<p>+55 47 3367- 2815</p>
+				<img id="mon" src="./Images/money.png">
+				<p>R$45,00 (ADULTO)<br>
+					R$23,00 (06 A 12 ANOS)<br>
+					R$23,00 (ACIMA DE 60 ANOS)<br>
+				</p>
+			</div>
+			<img id="int" onclick="desc('more2')" src="./Images/interrogação.png">
+		</div>
+		<div class="info">
+			<div class="lugar"><img onclick="selectLugar()" src="./Images/places/2.jpg"></div>
+
+			<h2> Parque Unipraias (Barra Sul)</h2>
+			<div class="more" id="more3">
+				<p>Horários de funcionamento: 09:00 às 17:30 (bilheteria encerra 16:30)</p>
+				<p id="p1">A Estação Barra Sul é um dos pontos de embarque para a viagem que combina natureza e
+					diversão, com uma vista panorâmica de 360 graus. Foram as embarcações navais que inspiraram a
+					arquitetura dessa estação, que possui três pavimentos. O espaço é interativo e de múltiplo uso,
+					comportando exposições artísticas, artesanato e manifestações populares.
+					A vista é panorâmica, voltada para a ponta sul da praia de Balneário Camboriú, onde acontece o
+					encontro das águas do mar com o rio Camboriú. A área de embarque dos bondinhos aéreos fica no
+					segundo piso.
+					Essa Estação possuí uma área de 6.500 m², tendo três pavimentos. No piso térreo, encontram-se
+					restaurantes, salas de administração da empresa, departamento comercial, marketing, almoxarifado,
+					além de vestiários para colaboradores e estacionamento com capacidade para 120 carros.
+					No primeiro piso encontram-se sanitários, bilheteria, lojas e praça de alimentação. Já no segundo
+					piso encontra-se o embarque e desembarque dos bondinhos, sanitários e salas de manutenção e
+					supervisão.</p>
+				<img id="alo" src="./Images/alo.png">
+				<p>+55 (47) 3404 7600</p>
+				<img id="mon" src="./Images/money.png">
+				<hr>
+				<p>BONDINHO (acesso ao parque)<br>
+					R$42,00 (ADULTO)<br>
+					R$21,00 (6 A 12 ANOS) *Mediante apresentação de documento* <br>
+					R$21,00 (ACIMA DE 60 ANOS) *Mediante apresentação de documento* <br>
+					Crianças de 0 a 5 anos não pagam *Mediante apresentação de documento*<br>
+					<hr>
+					YOUHOOO!<br>
+					R$34,00 (INDIVIDUAL)<br>
+					R$45,00 (2 PESSOAS)<br>
+					<hr>
+					ZIP RIDER<br>
+					R$45,00<br>
+					<hr>
+					FANTASTICA FLORESTA<br>
+					R$30,00<br>
+					Crianças até dois anos não pagam
+				</p>
+			</div>
+			<img id="int" onclick="desc('more3')" src="./Images/interrogação.png">
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <title>Página Admin</title>
+</head>
+<body>
+    <img src="./Images/logo.png" id="logo">
+    <button id="botao1" onclick="desc('formImagem')">Criar roteiro</button>
+    <div class="formImagem">
+        <form id="formImagem" enctype="multipart/form-data"  accept-charset="utf-8" method="POST" action="server/admin.php">
+            <h1>Nome do local</h1><input type="text" name="nome" id="nome" maxlength="255"><br>
+            <h1>Descrição</h1><input type="text" name="desc" id="desc" maxlength="5000"><br>
+            <h1>Telefone</h1><input type="text" name="tel" id="tel" maxlength="20"><br>
+            <h1>Preço adulto</h1><input type="text" name="pa" id="pa"><br>
+            <h1>Preço criança</h1><input type="text" name="pc" id="pc"><br>
+            <h1>Preço idoso</h1><input type="text" name="pi" id="pi"><br>
+            <h1>Restrição de idade</h1><input type="text" name="ri" id="ri" maxlength="3"><br>
+            <h1>Imagem do local</h1><input type="file" name="arquivo" id="imagem"><br>
+            <div class="botoes">
+            <input type="submit" id="butao" value="enviar" name="enviar"></div>
+            </form>
+        </div>
+</body>
+</html>
